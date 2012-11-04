@@ -1,0 +1,16 @@
+@(coffeeShops: Seq[CoffeeShop], form: play.api.data.Form[String])
+
+@main("Welcome to Play 2.0") {
+
+<ul>
+    @coffeeShops.map { coffeeShop =>
+    <li>@coffeeShop.name</li>
+    }
+</ul>
+
+  @helper.form(action = routes.CoffeeShops.addCoffeeShop) {
+        @helper.inputText(form("name"))
+        <input type="submit"/>
+    }
+
+}

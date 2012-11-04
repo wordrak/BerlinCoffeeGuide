@@ -3,13 +3,23 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>@title</title>
-        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
-        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
-        <script src="@routes.Assets.at("javascripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
-    </head>
-    <body>
-        @content
-    </body>
+<head>
+    <title>@title</title>
+    <link rel="stylesheet" media="screen" href='@routes.Assets.at("stylesheets/main.css")'>
+    <link rel="shortcut icon" type="image/png" href='@routes.Assets.at("images/favicon.png")'>
+    <script src='@routes.Assets.at("javascripts/jquery-1.7.1.min.js")' type="text/javascript"></script>
+</head>
+<body>
+<header class="page"><h1>Berlin Coffee Guide</h1></header>
+<nav class="page">
+    <ul>
+        <li><a href="@routes.Site.welcome">Home</a></li>
+        <li><a href="@routes.CoffeeShops.search">Coffee Shops</a></li>
+        <li><a href="#">Kaffee Wissen</a></li>
+        <li><a href="@routes.Site.about">About</a></li>
+    </ul>
+</nav>
+<section class="page">@content</section>
+<footer class="page">&copy; 2012 BerlinCoffeeGuide</footer>
+</body>
 </html>
